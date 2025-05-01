@@ -23,6 +23,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ProductBlobJson'"
 		},
+		"AzureDataLakeStorage1new_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1new'"
+		},
+		"ADLSGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLSGen2'"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "onemay.database.windows.net"
@@ -58,6 +66,14 @@
 		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "AdityaJangid"
+		},
+		"AzureDataLakeStorage1new_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -98,6 +114,12 @@
 					"ProductBlobJson_connectionString": {
 						"value": "[parameters('ProductBlobJson_connectionString')]"
 					},
+					"AzureDataLakeStorage1new_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1new_accountKey')]"
+					},
+					"ADLSGen2_accountKey": {
+						"value": "[parameters('ADLSGen2_accountKey')]"
+					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
 					},
@@ -124,6 +146,12 @@
 					},
 					"AzureSqlDatabase3_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]"
+					},
+					"AzureDataLakeStorage1new_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1new_properties_typeProperties_url')]"
+					},
+					"ADLSGen2_properties_typeProperties_url": {
+						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"
 					}
 				}
 			},

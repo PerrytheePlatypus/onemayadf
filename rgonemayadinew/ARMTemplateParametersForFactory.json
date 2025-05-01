@@ -4,6 +4,45 @@
 	"parameters": {
 		"factoryName": {
 			"value": "rgonemayadinew"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_password": {
+			"value": ""
+		},
+		"ProductBlobJson_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "onemay.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "storage1292"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "AdityaJangid"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "onemay.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "storage1292"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "AdityaJangid"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "onemay.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "storage1292"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "AdityaJangid"
 		}
 	}
 }

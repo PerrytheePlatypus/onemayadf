@@ -1,0 +1,19 @@
+{
+	"name": "ProductMarkup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ProductBlobJson",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ProductsMarkup.json",
+				"container": "products"
+			}
+		},
+		"schema": {}
+	}
+}

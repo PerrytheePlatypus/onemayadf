@@ -1,0 +1,23 @@
+{
+	"name": "AzureBLOBJanadi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageNew",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "TripData.csv",
+				"container": "tridata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

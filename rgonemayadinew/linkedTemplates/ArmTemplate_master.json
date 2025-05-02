@@ -39,6 +39,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'TripAdlsdata'"
 		},
+		"AzureBlobStorageNew_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageNew'"
+		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
@@ -149,6 +153,9 @@
 					},
 					"TripAdlsdata_accountKey": {
 						"value": "[parameters('TripAdlsdata_accountKey')]"
+					},
+					"AzureBlobStorageNew_connectionString": {
+						"value": "[parameters('AzureBlobStorageNew_connectionString')]"
 					},
 					"ADLSGen2_properties_typeProperties_url": {
 						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"

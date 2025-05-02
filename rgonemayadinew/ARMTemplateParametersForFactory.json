@@ -29,6 +29,9 @@
 		"TripAdlsdata_accountKey": {
 			"value": ""
 		},
+		"AzureBlobStorageNew_connectionString": {
+			"value": ""
+		},
 		"ADLSGen2_properties_typeProperties_url": {
 			"value": "https://datalinkjangidrgadi.dfs.core.windows.net/"
 		},

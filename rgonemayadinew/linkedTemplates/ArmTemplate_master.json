@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "rgonemayadinew"
 		},
+		"ADLSGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLSGen2'"
+		},
+		"AzureDataLakeStorage1new_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1new'"
+		},
 		"AzureSqlDatabase1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
@@ -23,13 +31,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ProductBlobJson'"
 		},
-		"AzureDataLakeStorage1new_accountKey": {
+		"AzureSqlDatabaseTaxi_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1new'"
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseTaxi'"
 		},
-		"ADLSGen2_accountKey": {
+		"TripAdlsdata_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ADLSGen2'"
+			"metadata": "Secure string for 'accountKey' of 'TripAdlsdata'"
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1new_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
@@ -67,13 +83,21 @@
 			"type": "string",
 			"defaultValue": "AdityaJangid"
 		},
-		"AzureDataLakeStorage1new_properties_typeProperties_url": {
+		"AzureSqlDatabaseTaxi_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+			"defaultValue": "onemay.database.windows.net"
 		},
-		"ADLSGen2_properties_typeProperties_url": {
+		"AzureSqlDatabaseTaxi_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+			"defaultValue": "databaseTaxiJangid"
+		},
+		"AzureSqlDatabaseTaxi_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "AdityaJangid"
+		},
+		"TripAdlsdata_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://saadlsjangid.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -102,6 +126,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ADLSGen2_accountKey": {
+						"value": "[parameters('ADLSGen2_accountKey')]"
+					},
+					"AzureDataLakeStorage1new_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1new_accountKey')]"
+					},
 					"AzureSqlDatabase1_password": {
 						"value": "[parameters('AzureSqlDatabase1_password')]"
 					},
@@ -114,11 +144,17 @@
 					"ProductBlobJson_connectionString": {
 						"value": "[parameters('ProductBlobJson_connectionString')]"
 					},
-					"AzureDataLakeStorage1new_accountKey": {
-						"value": "[parameters('AzureDataLakeStorage1new_accountKey')]"
+					"AzureSqlDatabaseTaxi_password": {
+						"value": "[parameters('AzureSqlDatabaseTaxi_password')]"
 					},
-					"ADLSGen2_accountKey": {
-						"value": "[parameters('ADLSGen2_accountKey')]"
+					"TripAdlsdata_accountKey": {
+						"value": "[parameters('TripAdlsdata_accountKey')]"
+					},
+					"ADLSGen2_properties_typeProperties_url": {
+						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage1new_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1new_properties_typeProperties_url')]"
 					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
@@ -147,15 +183,41 @@
 					"AzureSqlDatabase3_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]"
 					},
-					"AzureDataLakeStorage1new_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage1new_properties_typeProperties_url')]"
+					"AzureSqlDatabaseTaxi_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseTaxi_properties_typeProperties_server')]"
 					},
-					"ADLSGen2_properties_typeProperties_url": {
-						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"
+					"AzureSqlDatabaseTaxi_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseTaxi_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseTaxi_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseTaxi_properties_typeProperties_userName')]"
+					},
+					"TripAdlsdata_properties_typeProperties_url": {
+						"value": "[parameters('TripAdlsdata_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "rgonemayadinew_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'rgonemayadinew_ArmTemplate_0')]"
+			]
 		}
 	]
 }

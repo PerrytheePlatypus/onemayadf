@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "rgonemayadinew"
 		},
+		"ADLSGen2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1new_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
@@ -17,11 +23,17 @@
 		"ProductBlobJson_connectionString": {
 			"value": ""
 		},
-		"AzureDataLakeStorage1new_accountKey": {
+		"AzureSqlDatabaseTaxi_password": {
 			"value": ""
 		},
-		"ADLSGen2_accountKey": {
+		"TripAdlsdata_accountKey": {
 			"value": ""
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"value": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1new_properties_typeProperties_url": {
+			"value": "https://datalinkjangidrgadi.dfs.core.windows.net/"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "onemay.database.windows.net"
@@ -50,11 +62,17 @@
 		"AzureSqlDatabase3_properties_typeProperties_userName": {
 			"value": "AdityaJangid"
 		},
-		"AzureDataLakeStorage1new_properties_typeProperties_url": {
-			"value": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+		"AzureSqlDatabaseTaxi_properties_typeProperties_server": {
+			"value": "onemay.database.windows.net"
 		},
-		"ADLSGen2_properties_typeProperties_url": {
-			"value": "https://datalinkjangidrgadi.dfs.core.windows.net/"
+		"AzureSqlDatabaseTaxi_properties_typeProperties_database": {
+			"value": "databaseTaxiJangid"
+		},
+		"AzureSqlDatabaseTaxi_properties_typeProperties_userName": {
+			"value": "AdityaJangid"
+		},
+		"TripAdlsdata_properties_typeProperties_url": {
+			"value": "https://saadlsjangid.dfs.core.windows.net/"
 		}
 	}
 }

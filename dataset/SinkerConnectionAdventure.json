@@ -1,0 +1,23 @@
+{
+	"name": "SinkerConnectionAdventure",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureAdventureSink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sales.csv",
+				"container": "sales"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

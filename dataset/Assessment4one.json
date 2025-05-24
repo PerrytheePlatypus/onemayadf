@@ -1,0 +1,48 @@
+{
+	"name": "Assessment4one",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageAssessment4",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Sales.csv",
+				"fileSystem": "sales"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SaleID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "ProductName",
+				"type": "String"
+			},
+			{
+				"name": "Quantity",
+				"type": "String"
+			},
+			{
+				"name": "SaleAmount",
+				"type": "String"
+			},
+			{
+				"name": "SaleDate",
+				"type": "String"
+			}
+		]
+	}
+}
